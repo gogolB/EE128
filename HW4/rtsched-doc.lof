@@ -1,0 +1,12 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Two tasks, with deadline equal to period, RM scheduling}}{4}
+\contentsline {figure}{\numberline {2}{\ignorespaces Using periodic commands to avoid repetitions}}{5}
+\contentsline {figure}{\numberline {3}{\ignorespaces Three tasks with offsets, and only arrivals with no deadlines}}{6}
+\contentsline {figure}{\numberline {4}{\ignorespaces Deadlines less than periods}}{7}
+\contentsline {figure}{\numberline {5}{\ignorespaces Example with TaskRespTime}}{8}
+\contentsline {figure}{\numberline {6}{\ignorespaces Removing visualization of the grid and of the task names}}{9}
+\contentsline {figure}{\numberline {7}{\ignorespaces Different symbols (with \textbackslash Large size), no numbers, a different task color}}{10}
+\contentsline {figure}{\numberline {8}{\ignorespaces Arbitrary symbols with an appropriate offset, no grid, numbering starting from 12}}{11}
+\contentsline {figure}{\numberline {9}{\ignorespaces Activation (from one task to another one), and an arbitrary label}}{12}
+\contentsline {figure}{\numberline {10}{\ignorespaces Task blocking on resources: the Priority Inheritance Protocol}}{13}
+\contentsline {figure}{\numberline {11}{\ignorespaces Priority Inheritance example}}{13}
+\contentsline {figure}{\numberline {12}{\ignorespaces Example with TaskInterval used to represent jitters}}{14}

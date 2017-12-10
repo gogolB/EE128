@@ -1,0 +1,102 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{float}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=C,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=4
+}
+
+\title{HW 2: Serial Communication, Optimization, and Feedback Control}
+\date{November 27, 2017}
+\author{Souradeep Bhattacharya \\ EE128 Section: 001}
+\begin{document}
+	\maketitle
+	\section*{Question 1: SCI}
+	\subsection*{Part A}
+	The advantages of serial over parallel communications are as follows:
+	\begin{itemize}
+		\item Uses less wires
+		\item It less expensive to implement
+		\item It is easier to increase the the signal frequency.
+	\end{itemize}
+	\subsection*{Part B}
+	\begin{lstlisting}
+	void initSCI1()
+	{
+		// Clock at 14400
+		SC1BD = 104;
+		
+		// Enable Odd Parity and Parity Checking
+		SCI1CR1 = 0x03;
+		
+		// Enable TX, RX, RXFI, TXEI
+		SCI1CR2 = 0x6c;
+	}
+	\end{lstlisting}
+	\section*{Question 2: SPI}
+	\begin{lstlisting}
+	void initSPI()
+	{
+		SPI0BR = 0x52;
+		SPI0CR1 = 0xFD;
+	}
+	\end{lstlisting}
+	\section*{Question 3: I2C}
+	\subsection*{Part A}
+	The address is 0b0011010 or 0x1A
+	\subsection*{Part B}
+	Data is being written to slave device. Data is 0b00010110 or 0x12.
+	\section*{Question 4: PID Control}
+	\begin{lstlisting}
+	// Time constants. Will be initialized in main().
+	double Kp; // proportional gain
+	double Ki; // integral gain
+	double Kd; // derivative gain
+	
+	double cumulative_error = 0; // stores the sum of all prior errors
+	double previous_output = 0; // stores the value of prior output
+	
+	// make_decision(): generates a drive signal
+	// - setpoint: desired condition
+	// - current_output: current condition measured by sensors
+	double make_decision(double setpoint, double current_output) {
+	
+		// PID terms
+		double P, I, D;
+		
+		// Question (a)
+		P = Kp * (setpoint - current_output);
+		
+		// Question (b)
+		cumulative_error += (setpoint - current_output);
+		I = Ki * cumulative_error;
+		
+		// Question (c)
+		D = Kd * (current_output - previous_output);
+		previous_output = current_output;
+		
+		return u = P + I - D;
+	}
+	\end{lstlisting}
+\end{document}

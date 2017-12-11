@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.10.29)  27 NOV 2017 10:02
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.10.29)  10 DEC 2017 15:50
 entering extended mode
 **./HW3.tex
 (HW3.tex
@@ -114,80 +114,34 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks18
 \@floatcapt=\box29
 )
-(C:\Users\Gogol\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(C:\Users\Gogol\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-)
-(HW3.aux)
-\openout1 = `HW3.aux'.
+(C:\Users\Gogol\AppData\Roaming\MiKTeX\2.9\tex\latex\rtsched\rtsched.sty
+Package: rtsched 2005/01/01
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+'rtsched' style for Latex and PSTricks
+Easily draw real-time schedules in TeX/Latex.
+(c) 2005, Giuseppe Lipari, Pisa, Italy (g.lipari@sssup.it)
+Version 1.0
 
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+! LaTeX Error: File `multido.sty' not found.
 
-\c@lstlisting=\count99
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 34.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 34.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 34.
-[1
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
 
-] [2] (HW3.aux) ) 
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.9 \RequirePackage
+                   {pstricks}^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
 Here is how much of TeX's memory you used:
- 2581 strings out of 427834
- 35196 string characters out of 3152469
- 164024 words of memory out of 3000000
- 6547 multiletter control sequences out of 15000+200000
- 6448 words of font info for 32 fonts, out of 3000000 for 9000
+ 2367 strings out of 427834
+ 32316 string characters out of 3152469
+ 99934 words of memory out of 3000000
+ 6362 multiletter control sequences out of 15000+200000
+ 3648 words of font info for 15 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 26i,6n,49p,200b,1041s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on HW3.pdf (2 pages).
+ 26i,0n,32p,200b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

@@ -101,64 +101,63 @@
 	The system meets the EDF Schedulability Condition, therefore the system can be scheduled with EDF.
 	\subsection*{Part B}
 	The system has a higher utilization then the bound ($U(3) = 0.780$). Need to apply RT test to determine schedulability.
-	$$R_3^0=C_3=5$$
-	$$R_3^1=5+\ceil*{\frac{5}{60}}13+\ceil*{\frac{5}{15}}8=5+13+8=26$$
-	%$$R_3^2=5+\ceil*{\frac{26}{60}}13+\ceil*{\frac{26}{15}}8=5+13+16=34$$
-	%$$R_3^3=5+\ceil*{\frac{34}{60}}13+\ceil*{\frac{34}{15}}8=5+13+16=34$$
-	Not schedulable with Rate Monotonic because of violation of deadline of Task 3.
+	$$Order: \tau_2, \tau_3, \tau_1 $$
+	$$R_1^0=C_1=13$$
+	$$R_1^1=13+\ceil*{\frac{13}{15}}8+\ceil*{\frac{13}{20}}5=13+8+5=26$$
+	$$R_1^2=13+\ceil*{\frac{26}{15}}8+\ceil*{\frac{26}{20}}5=13+16+10=39$$
+	$$R_1^3=13+\ceil*{\frac{39}{15}}8+\ceil*{\frac{39}{20}}5=13+24+10=47$$
+	$$R_1^4=13+\ceil*{\frac{47}{15}}8+\ceil*{\frac{47}{20}}5=13+32+15=60$$
+	$$R_1^5=13+\ceil*{\frac{60}{15}}8+\ceil*{\frac{60}{20}}5=13+32+15=60$$
+	Can be scheduled with rate monotonic scheduling.
 	\subsection*{Part C}
-	Task set is not harmonic because not schedulable with U = 1. Also 15 and 20 are not multiples of one another.
+	15 and 20 are not multiples of one another.
 	\subsection*{Part D}
 	\begin{figure}[H]
-		\begin{RTGrid}[width=16cm,height=8cm,nonumbers=1,labelsize=\Large]{3}{60}
-			\TaskArrival{1}{0}
-			\TaskDeadline{1}{60}
-			\TaskArrival{2}{0}
-			\TaskDeadline{2}{15}
-			\TaskArrival{3}{0}
-			\TaskDeadline{3}{20}
+		\begin{RTGrid}[width=16cm,height=8cm,nonumbers=1,labelsize=\Large, nosymbols=1]{3}{60}
+			\RowLabel{1}{$\tau_2$}
+			\RowLabel{2}{$\tau_3$}
+			\RowLabel{3}{$\tau_1$}
 			
-			\TaskExecDelta{1}{0}{13}
+			\TaskNArrival{1}{0}{15}{4} 
+			\TaskNDeadline{1}{15}{15}{4}
 			
-			\TaskRespTime{2}{0}{13}
-			\TaskExecDelta[color=red]{2}{13}{8}
+			\TaskNArrival{2}{0}{20}{3} 
+			\TaskNDeadline{2}{20}{20}{3}
 			
-			\TaskArrival{2}{15}
-			\TaskDeadline{2}{30}
+			\TaskNArrival{3}{0}{60}{1} 
+			\TaskNDeadline{3}{60}{60}{1}
 			
-			\TaskArrival{3}{20}
-			\TaskDeadline{3}{40}
+			\TaskExecDelta{1}{0}{8}
 			
-			\TaskExecDelta{2}{21}{8}
+			\TaskRespTime{2}{0}{8}
+			\TaskExecDelta{2}{8}{5}
 			
 			
-			\TaskRespTime{3}{0}{29}
-			\TaskExecDelta[color=red]{3}{29}{5}
+			\TaskRespTime{3}{0}{13}
+			\TaskExecDelta[color=cyan]{3}{13}{2}
 			
-			\TaskArrival{2}{30}
-			\TaskDeadline{2}{45}
+			\TaskExecDelta{1}{15}{8}
 			
-			\TaskRespTime{2}{30}{4}
-			\TaskExecDelta{2}{34}{8}
-			\TaskRespTime{3}{34}{8}
+			\TaskRespTime{2}{20}{3}
+			\TaskExecDelta{2}{23}{5}
 			
-			\TaskArrival{3}{40}
-			\TaskDeadline{3}{60}
+			\TaskRespTime{3}{15}{13}
+			\TaskExecDelta[color=cyan]{3}{28}{2}
 			
-			\TaskArrival{2}{45}
-			\TaskDeadline{2}{60}
+			\TaskExecDelta{1}{30}{8}
 			
-			\TaskExecDelta[color=red]{3}{42}{5}
+			\TaskExecDelta{2}{40}{5}
 			
-			\TaskRespTime{2}{45}{2}
-			\TaskExecDelta{2}{47}{8}
+			\TaskRespTime{3}{30}{8}
+			\TaskExecDelta[color=cyan]{3}{38}{2}
 			
-			\TaskRespTime{3}{47}{8}
+			\TaskExecDelta{1}{45}{8}
 			
-			\TaskExecDelta{3}{55}{5}
+			\TaskRespTime{3}{40}{13}
+			\TaskExecDelta{3}{53}{7}
 			
 		\end{RTGrid}
 		\centering
-		\caption{The downward arrow represents the deadline and the upward arrow represents the arrival of a task. If the box is red it means the task was not able to finish before it's deadline.}
+		\caption{The downward arrow represents the deadline and the upward arrow represents the arrival of a task. If the box is blue it means the task was preempted.}
 	\end{figure}
 \end{document}
